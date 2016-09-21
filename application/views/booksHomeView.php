@@ -27,7 +27,9 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
 
 	<script>
-		
+		$(document).ready(function() {
+    $('select').material_select();
+  });
 	</script>
 </head>
 <body>

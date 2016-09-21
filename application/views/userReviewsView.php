@@ -16,7 +16,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<!-- Materialize CSS -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
 	<!-- Personal CSS -->
-	<link rel="stylesheet" href="assets/css/style.css">
+	<link rel="stylesheet" href="/assets/css/style.css">
 
 
 	<!-- Less -->
@@ -30,7 +30,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
 
 	<script>
-		
+		$(document).ready(function() {
+			$('select').material_select();
+		});
 	</script>
 </head>
 <body>

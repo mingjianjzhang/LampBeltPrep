@@ -16,7 +16,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<!-- Materialize CSS -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
 	<!-- Personal CSS -->
-	<link rel="stylesheet" href="assets/css/style.css">
+	<link rel="stylesheet" href="/assets/css/style.css">
 
 
 	<!-- Less -->
@@ -30,7 +30,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
 
 	<script>
-		
+		$(document).ready(function() {
+    $('select').material_select();
+  });
 	</script>
 </head>
 <body>
@@ -49,41 +51,43 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		<p>Divergent</p>
 		<p>Author: Veronica Roth </p>
 	</div>
-	<div class="col s6">
-		<h3>Reviews</h3>
-		<table class="bordered">
-			<thead>
-				<tr>
-					<th data-field="id">Name</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td>Rating</td>
-				</tr>
-				<tr>
-					<td>Rating</td>
-				</tr>
-				<tr>
-					<td>Rating</td>
-				</tr>
-			</tbody>
-		</table>
-	</div>
-	<div>
-		<h4>Add a Review:</h4>
-		<div class="input-field col s12">
-			<textarea id="textarea1" class="materialize-textarea"></textarea>
-			<label for="textarea1">Review</label>
+	<div class="row">
+		<div class="col s6">
+			<h3>Reviews</h3>
+			<table class="bordered">
+				<thead>
+					<tr>
+						<th data-field="id">Name</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Rating</td>
+					</tr>
+					<tr>
+						<td>Rating</td>
+					</tr>
+					<tr>
+						<td>Rating</td>
+					</tr>
+				</tbody>
+			</table>
 		</div>
-		<p>Rating: <input type="" name="">
-			<option>5</option>
-			<option>4</option>
-			<option>3</option>
-			<option>2</option>
-			<option>1</option>
-			stars.
+		<div class="col s6">
+			<h4>Add a Review:</h4>
+			<div class="input-field col s12">
+				<textarea id="textarea1" class="materialize-textarea"></textarea>
+				<label for="textarea1">Review</label>
+			</div>
+			<p>Rating:</p> <select class="rating" name="rating">
+				<option value="5">5</option>
+				<option value="4">4</option>
+				<option value="3">3</option>
+				<option value="2">2</option>
+				<option value="1">1</option>
+			</select>
 			<input type="submit" name="Submit Review">
 		</div>
-	</body>
-	</html>
+	</div>
+</body>
+</html>
