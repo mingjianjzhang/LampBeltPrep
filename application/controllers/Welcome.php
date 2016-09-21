@@ -30,6 +30,7 @@ class Welcome extends CI_Controller {
 	public function login() {
 		
 	}
+
 	public function booksadd() {
 		$this->load->view("addBookAndReviewView.php");
 	}
@@ -38,5 +39,8 @@ class Welcome extends CI_Controller {
 	}
 	public function userreviews() {
 		$this->load->view("userReviewsView.php");
+	}
+	public function booksHome() {
+		$this->load->view('booksHomeView');
 	}
 }
