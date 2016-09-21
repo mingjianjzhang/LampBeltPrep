@@ -31,8 +31,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 	<script>
 		$(document).ready(function() {
-    $('select').material_select();
-  });
+			$('select').material_select();
+		});
 	</script>
 </head>
 <body>
@@ -80,14 +80,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<label for="textarea1">Review</label>
 			</div>
 			<p>Rating:</p> <select class="rating" name="rating">
-				<option value="5">5</option>
-				<option value="4">4</option>
-				<option value="3">3</option>
-				<option value="2">2</option>
-				<option value="1">1</option>
-			</select>
-			<input type="submit" name="Submit Review">
-		</div>
+			<option value="5">5</option>
+			<option value="4">4</option>
+			<option value="3">3</option>
+			<option value="2">2</option>
+			<option value="1">1</option>
+		</select>
+		<input type="submit" name="Submit Review">
 	</div>
+</div>
 </body>
 </html>

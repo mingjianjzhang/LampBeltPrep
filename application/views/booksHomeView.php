@@ -21,27 +21,27 @@
 
 
 	<!-- Jquery --> 
-    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 
-    <!-- Materialize JS -->
+	<!-- Materialize JS -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
 
 	<script>
 		$(document).ready(function() {
-    $('select').material_select();
-  });
+			$('select').material_select();
+		});
 	</script>
 </head>
 <body>
 	<nav>
 		<div class="container">
-		<div class="nav-wrapper">
-			<h5 class="brand-logo">Welcome, Josh </h5>
-			<ul id="nav-mobile" class="right">
-				<li><a>Add a Book and Review</a></li>
-				<li><a>Logout</a></li>
-			</ul>
-		</div>
+			<div class="nav-wrapper">
+			<h5 class="brand-logo">Welcome <?= $this->session->alias ?></h5>
+				<ul id="nav-mobile" class="right">
+					<li><a href="">Add a Book and Review</a></li>
+					<li><a href="/welcome/logout">Logout</a></li>
+				</ul>
+			</div>
 		</div>
 	</nav>
 	<div class="container">
@@ -75,7 +75,7 @@
 				</div>
 			</div>
 			<div class="col s6">
-			
+
 				<h3> Other Books with Reviews: </h3>
 				<div class="otherReviews">
 					<ul>

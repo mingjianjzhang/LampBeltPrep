@@ -3,45 +3,30 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Welcome extends CI_Controller {
 
-	/**
-	 * Index Page for this controller.
-	 *
-	 * Maps to the following URL
-	 * 		http://example.com/index.php/welcome
-	 *	- or -
-	 * 		http://example.com/index.php/welcome/index
-	 *	- or -
-	 * Since this controller is set as the default controller in
-	 * config/routes.php, it's displayed at http://example.com/
-	 *
-	 * So any other public methods not prefixed with an underscore will
-	 * map to /index.php/welcome/<method_name>
-	 * @see https://codeigniter.com/user_guide/general/urls.html
-	 */
 	public function index()
 	{
 		$this->load->view('welcomeView');
 	}
 
+	public function __construct()
+	{
+		parent::__construct();
+		$this->load->model('User');
+		$this->output->enable_profiler();
+	}
 	public function register() {
-
+		$this->input->post();
+		$this->User->register($this->input->post());
+		redirect('/');
 	}
-
 	public function login() {
-		
+		$user = $this->User->login($this->input->post());
+		$this->session->set_userdata(array('id' => $user['id'], 'alias' => $user['alias']));
+		redirect('/books');
 	}
-
-	public function booksHome() { 
-		$this->load->view('booksHomeView'); // goes to page 2
-	}
-	public function booksadd() {
-		$this->load->view("addBookAndReviewView.php"); // goes to page 3
-	}
-	public function bookreview() {
-		$this->load->view("bookReviewView.php"); // goes to page 4
-	}
-	public function userreviews() { 
-		$this->load->view("userReviewsView.php");  // goes to page 5
+	public function logout() {
+		session_destroy();
+		redirect('/');
 	}
 
 }
