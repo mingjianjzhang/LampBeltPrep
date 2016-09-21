@@ -31,16 +31,17 @@ class Welcome extends CI_Controller {
 		
 	}
 
+	public function booksHome() { 
+		$this->load->view('booksHomeView'); // goes to page 2
+	}
 	public function booksadd() {
-		$this->load->view("addBookAndReviewView.php");
+		$this->load->view("addBookAndReviewView.php"); // goes to page 3
 	}
 	public function bookreview() {
-		$this->load->view("bookReviewView.php");
+		$this->load->view("bookReviewView.php"); // goes to page 4
 	}
-	public function userreviews() {
-		$this->load->view("userReviewsView.php");
+	public function userreviews() { 
+		$this->load->view("userReviewsView.php");  // goes to page 5
 	}
-	public function booksHome() {
-		$this->load->view('booksHomeView');
-	}
+
 }
