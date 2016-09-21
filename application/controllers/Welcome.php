@@ -30,4 +30,13 @@ class Welcome extends CI_Controller {
 	public function login() {
 		
 	}
+	public function booksadd() {
+		$this->load->view("addBookAndReviewView.php");
+	}
+	public function bookreview() {
+		$this->load->view("bookReviewView.php");
+	}
+	public function userreviews() {
+		$this->load->view("userReviewsView.php");
+	}
 }
