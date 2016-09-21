@@ -49,19 +49,22 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			<h3>Author:</h3>
 			<p>Choose from a list: <input type="" name=""></p>
 			<div class="input-field">
-			<input type="text" id="author" name="author">
+				<input type="text" id="author" name="author">
 				<label for="author">Author</label>
 			</div>
-			<p>Review <textarea></textarea>
-				<p>Rating: <input type="" name="">
-					<option>5</option>
-					<option>4</option>
-					<option>3</option>
-					<option>2</option>
-					<option>1</option>
-					stars.
-					<input type="submit" name="Add Book and Review">
-				</form>
+			<div class="input-field col s12">
+				<textarea id="textarea1" class="materialize-textarea"></textarea>
+				<label for="textarea1">Review</label>
 			</div>
-		</body>
-		</html>
+			<p>Rating: <input type="" name="">
+				<option>5</option>
+				<option>4</option>
+				<option>3</option>
+				<option>2</option>
+				<option>1</option>
+				stars.
+				<input type="submit" name="Add Book and Review">
+			</form>
+		</div>
+	</body>
+	</html>

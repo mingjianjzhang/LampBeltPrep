@@ -46,18 +46,22 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		<p>[rating in stars]</p>  <!-- foreach -->
 		<p>[user] " says " [comment]</p>
 		<p>[date posted]
-		<p><a href="">Delete this Review</a></p> <!-- [if this review is user's review, show link] -->
-	</div>
-		<h4>Add a Review:</h4>
-		<textarea></textarea>
-		<p>Rating: <input type="" name="">
-			<option>5</option>
-			<option>4</option>
-			<option>3</option>
-			<option>2</option>
-			<option>1</option>
-			stars.
-			<input type="submit" name="Submit Review">
-	</div>
-</body>
-</html>
+			<p><a href="">Delete this Review</a></p> <!-- [if this review is user's review, show link] -->
+		</div>
+		<div>
+			<h4>Add a Review:</h4>
+			<div class="input-field col s12">
+				<textarea id="textarea1" class="materialize-textarea"></textarea>
+				<label for="textarea1">Review</label>
+			</div>
+			<p>Rating: <input type="" name="">
+				<option>5</option>
+				<option>4</option>
+				<option>3</option>
+				<option>2</option>
+				<option>1</option>
+				stars.
+				<input type="submit" name="Submit Review">
+			</div>
+		</body>
+		</html>
