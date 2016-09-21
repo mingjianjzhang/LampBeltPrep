@@ -42,20 +42,26 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	</div>
 	<div>
 		<form>
-			<p>Book Title: <input type="" name=""></p>
-			<p>Author:</p>
+			<div class="input-field">
+				<input type="text" id="title" name="title">
+				<label for="title">Book Title</label>
+			</div>
+			<h3>Author:</h3>
 			<p>Choose from a list: <input type="" name=""></p>
-			<p>Or add a new author:</p>
+			<div class="input-field">
+			<input type="text" id="author" name="author">
+				<label for="author">Author</label>
+			</div>
 			<p>Review <textarea></textarea>
-			<p>Rating: <input type="" name="">
-			<option>5</option>
-			<option>4</option>
-			<option>3</option>
-			<option>2</option>
-			<option>1</option>
-			stars.
-			<input type="submit" name="Add Book and Review">
-		</form>
-	</div>
-</body>
-</html>
+				<p>Rating: <input type="" name="">
+					<option>5</option>
+					<option>4</option>
+					<option>3</option>
+					<option>2</option>
+					<option>1</option>
+					stars.
+					<input type="submit" name="Add Book and Review">
+				</form>
+			</div>
+		</body>
+		</html>
