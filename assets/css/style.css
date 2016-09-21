@@ -1,0 +1,8 @@
+#register, #login {
+	width: 40%;
+	display: inline-block;
+	vertical-align: top;
+	border: 1px solid black;
+	padding: 10px 20px;
+	margin-right: 3em;
+}
