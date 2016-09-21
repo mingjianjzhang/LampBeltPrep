@@ -34,20 +34,51 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	</script>
 </head>
 <body>
+	<nav>
+		<div class="container">
+			<div class="nav-wrapper">
+				<h5 class="brand-logo">Welcome, Josh </h5>
+				<ul id="nav-mobile" class="right">
+					<li><a>Home</a></li>
+					<li><a>Add a Book and Review</a></li>
+					<li><a>Logout</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
 	<div>
-		<a href="">Home</a><a href="">Add Book and Review</a><a href="">Logout</a>
+		<table>
+			<thead>
+				<tr>
+					<th data-field="id">User Alias:</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Name</td>
+				</tr>
+				<tr>
+					<td>Email</td>
+				</tr>
+				<tr>
+					<td>Total Reviews</td>
+				</tr>
+			</tbody>
+		</table>
 	</div>
 	<div>
-		<ul>User Alias: [phpcontent]
-			<li>Name: [phpcontent] </li>
-			<li>Email: [phpcontent] </li>
-			<li>Total Reviews: [phpcontent] </li>
-		</ul>
-	</div>
-	<div>
-		<ul>Posted Reviews on the following books:
-			<li> [phpforeach content] </li>
-		</ul>
+		<table>
+			<thead>
+				<tr>
+					<th data-field="id">Posted Reviews on the Following Books:</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td><a href="">Book</a></td>
+				</tr>
+			</tbody>
+		</table>
 	</div>
 </body>
 </html>
