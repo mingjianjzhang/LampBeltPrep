@@ -30,4 +30,8 @@ class Welcome extends CI_Controller {
 	public function login() {
 		
 	}
+
+	public function booksHome() {
+		$this->load->view('booksHomeView');
+	}
 }
