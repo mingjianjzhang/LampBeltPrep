@@ -16,7 +16,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<!-- Materialize CSS -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
 	<!-- Personal CSS -->
-	<link rel="stylesheet" href="assets/css/style.css">
+	<link rel="stylesheet" href="/assets/css/style.css">
 
 
 	<!-- Less -->
@@ -30,41 +30,65 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
 
 	<script>
-		
+		 $(document).ready(function() {
+    $('select').material_select();
+  });
 	</script>
 </head>
 <body>
-	<div>
-		<a href="">Home</a><a href="">Logout</a>
-	</div>
+	<nav>
+		<div class="container">
+		<div class="nav-wrapper">
+			
+			<ul id="nav-mobile" class="right">
+				<li><a>Home</a></li>
+				<li><a>Logout</a></li>
+			</ul>
+		</div>
+		</div>
+	</nav>
+<div class="container">
 	<div>
 		<h3>Add a New Book Title and a Review:</h3>
 	</div>
-	<div>
-		<form>
+	
+		<form id="addBookandReview" action="" method="POST">
 			<div class="input-field">
 				<input type="text" id="title" name="title">
 				<label for="title">Book Title</label>
 			</div>
-			<h3>Author:</h3>
-			<p>Choose from a list: <input type="" name=""></p>
-			<div class="input-field">
-				<input type="text" id="author" name="author">
-				<label for="author">Author</label>
+			<p>Author:</p>
+			<div id="chooseAuthor">
+				<p>Choose from a list:</p>
+
+				<select class="author" name="authors">
+					<option value="">David Foster Wallace</option>
+					<option value="">Franz Kafka</option>
+					<option value="">Denis Johnson</option>
+					<option value="">Flannery O'Connor</option>
+				</select>
+				<div class="input-field">
+					<input type="text" id="author" name="author">
+					<label for="author">...or add a new author</label>
+				</div>
 			</div>
-			<div class="input-field col s12">
-				<textarea id="textarea1" class="materialize-textarea"></textarea>
+			<div class="input-field">
+				<textarea id="textarea1" class="materialize-textarea" name="review"></textarea>
 				<label for="textarea1">Review</label>
 			</div>
-			<p>Rating: <input type="" name="">
-				<option>5</option>
-				<option>4</option>
-				<option>3</option>
-				<option>2</option>
-				<option>1</option>
-				stars.
-				<input type="submit" name="Add Book and Review">
-			</form>
+			<p id="ratinglabel">Rating:</p> 
+			<select class="rating" name="rating">
+				<option value="5">5</option>
+				<option value="4">4</option>
+				<option value="3">3</option>
+				<option value="2">2</option>
+				<option value="1">1</option>
+			</select>
+			<br>
+			<button class="btn waves-effect waves-light center-align" type="submit">Add Book and Review</button>
+		</form>
+		
 		</div>
+
 	</body>
 	</html>

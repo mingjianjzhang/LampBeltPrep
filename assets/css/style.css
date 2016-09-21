@@ -57,6 +57,42 @@
 	overflow: scroll;
 }
 
+#addBookandReview {
+	width: 60%;
+	margin-left: 2em;
+}
+	#addBookandReview > p {
+		font-size: 1.5em;
+	}
+
+#ratinglabel {
+	display: inline-block;
+}
+
+.rating {
+	width: 40px;
+}
 .recentReview p {
 	margin-left: 30px;
+}
+
+#chooseAuthor {
+	margin-left: 20px;
+}
+#chooseAuthor>p {
+	display: inline-block;
+	
+}
+
+#chooseAuthor > p {
+	display: inline-block;
+}
+
+.author {
+	width: 200px;
+}
+.select-wrapper {
+	margin-left: .5em;
+	display: inline-block;
+	
 }
