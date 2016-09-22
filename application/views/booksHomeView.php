@@ -38,55 +38,37 @@
 			<div class="nav-wrapper">
 			<h5 class="brand-logo">Welcome <?= $this->session->alias ?></h5>
 				<ul id="nav-mobile" class="right">
-					<li><a href="">Add a Book and Review</a></li>
+					<li><a href="/books/add">Add a Book and Review</a></li>
 					<li><a href="/welcome/logout">Logout</a></li>
 				</ul>
 			</div>
 		</div>
 	</nav>
 	<div class="container">
-		
 		<div class="row">
 			<div class="col s6">
 				<h3> Recent Book Reviews </h3>
+				<?php foreach ($recent as $review) { ?>
+
 				<div class="recentReview">
-					<h4><a href=""> Infinite Jest </a></h4>
-					<p id="rating"> Rating: </p><div class="stars-5"></div>
+					<h4><a href="books/<?= $review['id'] ?>"><?= $review['title'] ?></a></h4>
+					<p id="rating"> Rating: </p><div class="stars-<?= $review['rating'] ?>"></div>
 
-					<p><em><a href="">Josh says: Need to read this again</a></em></p>
+					<p><em><a href="/users/<?= $review['uid'] ?>"><?= $review['alias'] ?></a> says: <?= $review['comment'] ?></em></p>
 
-					<p><em>Posted on September 20, 2016</em></p>
+					<p><em>Posted on <?= $review['created_at'] ?></em></p>
 				</div>
-				<div class="recentReview">
-					<h4><a href=""> Infinite Jest </a></h4>
-					<p id="rating"> Rating: </p><div class="stars-5"></div>
-
-					<p><em><a href="">Josh says: Need to read this again</a></em></p>
-
-					<p><em>Posted on September 20, 2016</em></p>
-				</div>
-				<div class="recentReview">
-					<h4><a href=""> Infinite Jest </a></h4>
-					<p id="rating"> Rating: </p><div class="stars-5"></div>
-
-					<p><em><a href="">Josh says: Need to read this again</a></em></p>
-
-					<p><em>Posted on September 20, 2016</em></p>
-				</div>
+				
+				<?php } ?>
 			</div>
 			<div class="col s6">
 
 				<h3> Other Books with Reviews: </h3>
 				<div class="otherReviews">
 					<ul>
-						<li><a>The Trial</a></li>
-						<li><a>Nostromo</a></li>
-						<li><a>In Search of Lost Time</a></li>
-						<li><a>Crime and Punishment</a></li>
-						<li><a>The Trial</a></li>
-						<li><a>Nostromo</a></li>
-						<li><a>In Search of Lost Time</a></li>
-						<li><a>Crime and Punishment</a></li>
+						<?php foreach ($other as $others) { ?>
+							<li><a href="books/<?= $others['id'] ?>"><?= $others['title'] ?></a></li>
+							<?php } ?>
 					</ul>
 				</div>
 				

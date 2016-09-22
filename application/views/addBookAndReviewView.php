@@ -38,21 +38,22 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <body>
 	<nav>
 		<div class="container">
-		<div class="nav-wrapper">
-			
-			<ul id="nav-mobile" class="right">
-				<li><a>Home</a></li>
-				<li><a>Logout</a></li>
-			</ul>
-		</div>
+			<div class="nav-wrapper">
+				
+				<ul id="nav-mobile" class="right">
+					<li><a href="/books">Home</a></li>
+					<li><a href="/welcome/logout">Logout</a></li>
+				</ul>
+			</div>
 		</div>
 	</nav>
-<div class="container">
-	<div>
-		<h3>Add a New Book Title and a Review:</h3>
-	</div>
-	
-		<form id="addBookandReview" action="" method="POST">
+	<div class="container">
+		<div>
+			<h3>Add a New Book Title and a Review:</h3>
+		</div>
+		
+		<form id="addBookandReview" action="/books/addBook" method="POST">
+			<input type="hidden" name="user_Id" value="<?= $this->session->id ?>">
 			<div class="input-field">
 				<input type="text" id="title" name="title">
 				<label for="title">Book Title</label>
@@ -73,7 +74,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				</div>
 			</div>
 			<div class="input-field">
-				<textarea id="textarea1" class="materialize-textarea" name="review"></textarea>
+				<textarea id="textarea1" class="materialize-textarea" name="comment"></textarea>
 				<label for="textarea1">Review</label>
 			</div>
 			<p id="ratinglabel">Rating:</p> 
@@ -88,7 +89,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			<button class="btn waves-effect waves-light center-align" type="submit">Add Book and Review</button>
 		</form>
 		
-		</div>
+	</div>
 
-	</body>
-	</html>
+</body>
+</html>

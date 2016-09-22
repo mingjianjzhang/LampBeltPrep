@@ -39,48 +39,31 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<nav>
 		<div class="container">
 			<div class="nav-wrapper">
-				<h5 class="brand-logo">Welcome, Josh </h5>
 				<ul id="nav-mobile" class="right">
-					<li><a>Home</a></li>
-					<li><a>Add a Book and Review</a></li>
-					<li><a>Logout</a></li>
+					<li><a href="/books">Home</a></li>
+					<li><a href="/books/add">Add a Book and Review</a></li>
+					<li><a href="/welcome/logout">Logout</a></li>
 				</ul>
 			</div>
 		</div>
 	</nav>
 	<div>
 		<table>
-			<thead>
-				<tr>
-					<th data-field="id">User Alias:</th>
-				</tr>
-			</thead>
 			<tbody>
-				<tr>
-					<td>Name</td>
-				</tr>
-				<tr>
-					<td>Email</td>
-				</tr>
-				<tr>
-					<td>Total Reviews</td>
-				</tr>
+				<tr><td>User Alias: </td><td><?= $userInfo['alias'] ?></td></tr>
+				<tr><td>Name: </td><td><?= $userInfo['name'] ?></td></tr>
+				<tr><td>Email: </td><td><?= $userInfo['email'] ?></td></tr>
+				<tr><td>Total Reviews: </td><td><?= $userInfo['numreviews'] ?></td></tr>
 			</tbody>
 		</table>
 	</div>
 	<div>
-		<table>
-			<thead>
-				<tr>
-					<th data-field="id">Posted Reviews on the Following Books:</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td><a href="">Book</a></td>
-				</tr>
-			</tbody>
-		</table>
+		<h5>Posted Reviews on the Following Books:</h5>
+		<ul>
+			<?php foreach ($usersReviews as $title) { ?>
+				<li><a href="/books/<?= $title['id'] ?>"><?= $title['title'] ?></a></li>
+			<?php } ?>
+		</ul>
 	</div>
 </body>
 </html>
